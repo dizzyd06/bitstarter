@@ -7,7 +7,7 @@ var fs = require ('fs');
 //document.write(fileData);
 var app = express.createServer(express.logger());
 
-app.get('index.html', function(request, response) {
+app.get('./index.html', function(request, response) {
   //response.send(buf.toString('utf-8'));
     response.end();
 });
