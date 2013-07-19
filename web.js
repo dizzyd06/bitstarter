@@ -5,7 +5,7 @@ var fs = require ('fs');
 var fileData = fs.readFileSync('index.html','utf-8');
 //buf.write(fileData);
 //document.write(fileData);
-var app = express.createServer(express.logger());
+var app = express();
 
 app.get('/', function(request, response) {
   //response.send(buf.toString('utf-8'));
@@ -13,7 +13,7 @@ app.get('/', function(request, response) {
     response.end();
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
