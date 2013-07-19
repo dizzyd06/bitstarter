@@ -5,7 +5,7 @@ var fs = require ('fs');
 var fileData = fs.readFileSync('index.html','utf-8');
 //buf.write(fileData);
 //document.write(fileData);
-var app = express();
+var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   //response.send(buf.toString('utf-8'));
